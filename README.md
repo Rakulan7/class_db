@@ -1,2 +1,6 @@
 # class_db
-A simple skeleton code in C for a database
+
+
+## Author
+- Rakulan SIVATHASAN 3SI4
+- rsivathasan@myges.fr | s.rakulan04@gmail.com
