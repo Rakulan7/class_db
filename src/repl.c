@@ -64,8 +64,10 @@ MetaCommandResult do_meta_command(InputBuffer* input_buffer) {
   if (strcmp(input_buffer->buffer, ".exit") == 0) {
     close_input_buffer(input_buffer);
     exit(EXIT_SUCCESS);
+  } else if (strcmp(input_buffer->buffer, ".help") == 0) {
+    printf("insert statement : insert <id> <name> <email>\n")
+    printf("select statement : select\n")
   } else {
-    //TODO  here implement handling of other input as .exit
     return META_COMMAND_UNRECOGNIZED_COMMAND;
   }
 }
