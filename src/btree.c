@@ -35,3 +35,12 @@ void in_order_traversal(Node* root) {
     printf("(%d, %s, %s)\n", root->data.id, root->data.name, root->data.email);
     in_order_traversal(root->right);
 }
+
+void free_tree(Node* root) {
+    if (root == NULL) {
+        return;
+    }
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
+}

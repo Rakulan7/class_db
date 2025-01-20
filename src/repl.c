@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #include <string.h>
+#include "btree.h"
 
-
-
+extern Node* database_root;
 
 typedef enum {
   META_COMMAND_SUCCESS,
