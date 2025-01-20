@@ -10,12 +10,12 @@ TARGET = sgbd
 all: $(TARGET)
 
 $(TARGET): $(OBJ_FILES)
-        $(CC) $(CFLAGS) -o $(TARGET) $(OBJ_FILES)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ_FILES)
 
 $(SRC_DIR)/%.o: $(SRC_DIR)/%.c $(SRC_DIR)/%.h
-        $(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-        rm -f $(OBJ_FILES) $(TARGET)
+	rm -f $(OBJ_FILES) $(TARGET)
 
 .PHONY: all clean

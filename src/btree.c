@@ -3,6 +3,8 @@
 #include <string.h>
 #include "btree.h"
 
+Node* database_root = NULL;
+
 Node* create_node(Row data) {
     Node* node = (Node*)malloc(sizeof(Node));
     if (!node) {
