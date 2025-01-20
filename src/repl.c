@@ -95,12 +95,16 @@ PrepareResult prepare_statement(InputBuffer* input_buffer, Statement* statement)
 
 void execute_statement(Statement* statement) {
   switch (statement->type) {
-    case (STATEMENT_INSERT):
-    //TODO Implement the command here
-      break;
-    case (STATEMENT_SELECT):
-      //TODO implement the command here 
-      break;
+      case (STATEMENT_INSERT): {
+          database_root = insert(database_root, statement->row_to_insert);
+          printf("Row inserted.\n");
+          break;
+      }
+      case (STATEMENT_SELECT): {
+          printf("Rows :\n");
+          in_order_traversal(database_root);
+          break;
+      }
   }
 }
 
