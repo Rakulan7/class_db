@@ -62,6 +62,7 @@ void close_input_buffer(InputBuffer* input_buffer) {
 
 MetaCommandResult do_meta_command(InputBuffer* input_buffer) {
   if (strcmp(input_buffer->buffer, ".exit") == 0) {
+    free_tree(database_root);
     close_input_buffer(input_buffer);
     exit(EXIT_SUCCESS);
   } else if (strcmp(input_buffer->buffer, ".help") == 0) {
