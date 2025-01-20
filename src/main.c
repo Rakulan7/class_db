@@ -8,6 +8,7 @@
 
 int main(int argc, char* argv[], char* envp[]){
 
+	printf("Welcome to ESGI database.\nUsage : insert <id> <name> <email> / select.\nFor exit : .exit\n");
 	repl();
 	return 0;
 
