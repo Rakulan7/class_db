@@ -26,3 +26,12 @@ Node* insert(Node* root, Row data) {
     }
     return root;
 }
+
+void in_order_traversal(Node* root) {
+    if (root == NULL) {
+        return;
+    }
+    in_order_traversal(root->left);
+    printf("(%d, %s, %s)\n", root->data.id, root->data.name, root->data.email);
+    in_order_traversal(root->right);
+}
